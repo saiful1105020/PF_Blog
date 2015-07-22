@@ -26,6 +26,11 @@ class Home extends CI_Controller {
 		$this->load->view('blog');
 	}
 	
+	public function viewPost($post_id)
+	{
+	
+	}
+	
 	public function newPost()
 	{
 		

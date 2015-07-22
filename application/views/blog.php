@@ -25,7 +25,7 @@
                 <img class="img-responsive" src="http://placehold.it/900x300" alt="">
                 <hr>
                 <p>Welcome to playfantasy365. Be with us to get updates and amaging posts on Fantasy Premier League, once the site is live. Join our facebook group <a href="https://www.facebook.com/groups/fanfootybd/">Fantasy Fotball Players Of Bangladesh</a> for more updates. Thank you. </p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <a class="btn btn-primary" href="<?php $post_id=0; echo site_url('home/viewPost').'/'.$post_id;?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr>
 				
