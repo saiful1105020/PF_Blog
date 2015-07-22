@@ -7,6 +7,7 @@
             <!-- Blog Entries Column -->
             <div class="col-md-6">
 
+				
                 <h1 class="page-header">
                     PlayFantasy365 Blog
                     <br><small>Where the game is born</small>
@@ -154,27 +155,5 @@
         <!-- /.row -->
 
         <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; PlayFantasy365</p>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </footer>
-
     </div>
     <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
-</html>
