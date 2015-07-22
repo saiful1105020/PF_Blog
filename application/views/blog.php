@@ -7,44 +7,42 @@
             <!-- Blog Entries Column -->
             <div class="col-md-6">
 
-				
                 <h1 class="page-header">
                     PlayFantasy365 Blog
                     <br><small>Where the game is born</small>
                 </h1>
 
 
-                <!-- First Blog Post -->
-                <h2>
-                    <a href="#">Welcome to PlayFantasy!</a>
-                </h2>
-                <p class="lead">
-                     <a href="https://www.facebook.com/mdsaifulislam.suman">Md. Saiful Islam</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span>22 July,2015</p>
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                <p>Welcome to playfantasy365. Be with us to get updates and amaging posts on Fantasy Premier League, once the site is live. Join our facebook group <a href="https://www.facebook.com/groups/fanfootybd/">Fantasy Fotball Players Of Bangladesh</a> for more updates. Thank you. </p>
-                <a class="btn btn-primary" href="<?php $post_id=0; echo site_url('home/viewPost').'/'.$post_id;?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                <hr>
 				
 				<!-- First Blog Post -->
-                <h2>
-                    <a href="#">Fantasy Premier League 2015-16 :: prize announcement from FFPB is coming!</a>
-                </h2>
-                <p class="lead">
-                     <a href="http://www.facebook.com/farabi.mahmud">Farabi Mahmud</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span>22 July,2015</p>
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                <p>Announcement of prizes for the new season is coming. Please stay tuned!</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
-                <hr>
+                <?php foreach ($blogposts as $rows){  ?>
+                    <h2>
+                        <a href="#"><?php echo $rows['title'];?></a>
+                    </h2>
+                    <p class="lead">
+					<?php
+						$writer_name = "";
+                        foreach ($writers as $writer){
+							if ($writer['user_id']==$rows['poster_id']){
+								$writer_name = $writer['full_name'];                                    
+							}
+                        }
+						
+						$fbid=$writer['fbid'];
+						echo '<a href=" '.$fbid.'">'.$writer_name.'</a>';
+					?>
+                         
+                    </p>
+                    <p><span class="glyphicon glyphicon-time"></span><?php echo $rows['time'];?> </p>
+                    <hr>
+                    <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                    <hr>
+                    <p><?php echo substr($rows['subtitle'],0,40); ?></p>
+                    <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                    <hr>
+                <?php } ?>
 
                 <!-- Pager -->
                 <ul class="pager">

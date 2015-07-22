@@ -24,7 +24,15 @@ class Home extends CI_Controller {
 	 
 	public function index()	
 	{
-		$this->load->view('blog');
+		$sql = "select * from post order by time desc limit 3";
+		$query = $this->db->query($sql);
+		$data['blogposts'] = $query->result_array();
+		//var_dump($data);
+		$sql = "select * from writer";
+		$query = $this->db->query($sql);
+		$data['writers'] = $query->result_array();
+
+		$this->load->view('blog',$data);
 		$this->load->view('footer');
 	}
 	
