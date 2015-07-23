@@ -1,4 +1,4 @@
-
+<body>
     <!-- Page Content -->
     <div class="container">
 
@@ -25,11 +25,10 @@
 						$writer_name = "";
                         foreach ($writers as $writer){
 							if ($writer['user_id']==$rows['poster_id']){
-								$writer_name = $writer['full_name'];                                    
+								$writer_name = $writer['full_name'];
+								$fbid=$writer['fbid'];
 							}
                         }
-						
-						$fbid=$writer['fbid'];
 						echo '<a href=" '.$fbid.'">'.$writer_name.'</a>';
 					?>
                          
@@ -155,3 +154,4 @@
         <hr>
     </div>
     <!-- /.container -->
+</body>
